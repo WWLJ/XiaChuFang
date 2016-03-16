@@ -59,7 +59,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.setValueForCell(dic)
         
         //添加照片
-        cell.showImage?.image = UIImage(named: mainArray![indexPath.row] as! String)
+//        cell.showImage?.image = UIImage(named: mainArray![indexPath.row] as! String)
         
         return cell
     }
