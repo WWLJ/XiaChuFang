@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11044FDE1C9A8BE800DA55BB /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11044FDD1C9A8BE800DA55BB /* PrefixHeader.swift */; };
 		AFE4A7731C99009000DAFD91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4A7721C99009000DAFD91 /* AppDelegate.swift */; };
 		AFE4A7781C99009000DAFD91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE4A7761C99009000DAFD91 /* Main.storyboard */; };
 		AFE4A77A1C99009000DAFD91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE4A7791C99009000DAFD91 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11044FDD1C9A8BE800DA55BB /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		AFE4A76F1C99009000DAFD91 /* XiaChuFang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiaChuFang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE4A7721C99009000DAFD91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE4A7771C99009000DAFD91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +60,6 @@
 		AFE4A7AC1C9900DB00DAFD91 /* MarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		AFE4A7B11C9900DB00DAFD91 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		AFE4A7BE1C99017E00DAFD91 /* TabeBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabeBarViewController.swift; sourceTree = "<group>"; };
-		AFE4A7C01C9904E600DAFD91 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		AFE4A7C11C99351700DAFD91 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = "Main(下厨房)/Controller/Image.xcassets"; sourceTree = "<group>"; };
 		AFE4A7C31C9948E600DAFD91 /* MainClassicalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainClassicalCell.swift; sourceTree = "<group>"; };
 		AFE4A7C51C99685200DAFD91 /* MainHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
@@ -89,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11044FDC1C9A8AD800DA55BB /* DIYUtil */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DIYUtil;
+			sourceTree = "<group>";
+		};
 		AFE4A7661C99009000DAFD91 = {
 			isa = PBXGroup;
 			children = (
@@ -113,16 +121,17 @@
 			isa = PBXGroup;
 			children = (
 				AFE4A7721C99009000DAFD91 /* AppDelegate.swift */,
+				11044FDD1C9A8BE800DA55BB /* PrefixHeader.swift */,
 				AFE4A7A51C9900DB00DAFD91 /* Main(下厨房) */,
 				AFE4A7AA1C9900DB00DAFD91 /* Market(市集) */,
 				AFE4A7A01C9900DB00DAFD91 /* Community(社区) */,
 				AFE4A7AF1C9900DB00DAFD91 /* Me(我) */,
 				AFE4A7B41C9900DB00DAFD91 /* TabBarController */,
+				11044FDC1C9A8AD800DA55BB /* DIYUtil */,
 				AFE4A7761C99009000DAFD91 /* Main.storyboard */,
 				AFE4A7791C99009000DAFD91 /* Assets.xcassets */,
 				AFE4A7C11C99351700DAFD91 /* Image.xcassets */,
 				AFE4A77B1C99009000DAFD91 /* LaunchScreen.storyboard */,
-				AFE4A7C01C9904E600DAFD91 /* PrefixHeader.pch */,
 				AFE4A77E1C99009000DAFD91 /* Info.plist */,
 			);
 			path = XiaChuFang;
@@ -446,6 +455,7 @@
 				AFE4A7B91C9900DB00DAFD91 /* CommunityVC.swift in Sources */,
 				AFE4A7BB1C9900DB00DAFD91 /* MarketViewController.swift in Sources */,
 				AFE4A7731C99009000DAFD91 /* AppDelegate.swift in Sources */,
+				11044FDE1C9A8BE800DA55BB /* PrefixHeader.swift in Sources */,
 				AFE4A7BF1C99017E00DAFD91 /* TabeBarViewController.swift in Sources */,
 				AFE4A7BA1C9900DB00DAFD91 /* MainViewController.swift in Sources */,
 			);
@@ -594,10 +604,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XiaChuFang/PrefixHeader.pch";
 				INFOPLIST_FILE = XiaChuFang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yihuaapp.XiaChuFang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/XiaChuFang/PrefixHeader.pch";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -610,10 +622,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XiaChuFang/PrefixHeader.pch";
 				INFOPLIST_FILE = XiaChuFang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yihuaapp.XiaChuFang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/XiaChuFang/PrefixHeader.pch";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
