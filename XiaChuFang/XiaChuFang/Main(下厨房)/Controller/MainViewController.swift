@@ -21,6 +21,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var mainTable: UITableView?
     var mainArray: NSMutableArray?
     
+    var headerView: MainHeaderView?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (mainArray?.count)!
+        print(mainArray!.count)
+        return mainArray!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -64,14 +67,28 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+       headerView = MainHeaderView.init(frame: CGRectMake(0, 0, SCREENWIDTH, 340))
+        return headerView
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 340
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.0000000001
+    }
+    
     func loadDataSource() {
-        mainArray = ["宝宝0", "宝宝1", "宝宝2", "宝宝3", "宝宝4", "宝宝5", "宝宝6", "宝宝7", "宝宝8", "宝宝9", "宝宝10", "宝宝11"]
+        mainArray = NSMutableArray.init(array: ["宝宝0", "宝宝1", "宝宝2", "宝宝3", "宝宝4", "宝宝5", "宝宝6", "宝宝7", "宝宝8", "宝宝9", "宝宝10", "宝宝11"])
     }
     
     func setUpTable(){
-        mainTable = UITableView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height))
-        mainTable?.delegate = self
-        mainTable?.dataSource = self
+        mainTable = UITableView.init(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT) , style: UITableViewStyle.Grouped)
+        mainTable!.delegate = self
+        mainTable!.dataSource = self
+        mainTable!.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(mainTable!)
     }
 

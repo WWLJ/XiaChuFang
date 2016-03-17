@@ -24,28 +24,27 @@ class MainClassicalCell: UITableViewCell {
     }
     
     func setUpUI() {
-        showImage = UIImageView.init(frame: CGRectMake(5, 5, UIScreen.mainScreen().bounds.size.width-10, 170))
-//        showImage!.layer.cornerRadius = 40
+        showImage = UIImageView.init(frame: CGRectMake(5, 5, SCREENWIDTH-10, 170))
         showImage!.layer.masksToBounds = true
         self.addSubview(showImage!)
         
         subTitle = UILabel.init(frame: CGRectMake(10, 150, (showImage?.frame.size.width)!-20, 12))
         subTitle?.font = UIFont.systemFontOfSize(15)
         subTitle?.textAlignment = NSTextAlignment.Center
-        subTitle?.textColor = UIColor.whiteColor()
+        subTitle?.textColor = UIColor.redColor()
         self.addSubview(subTitle!)
         
         firstTitle = UILabel.init(frame: CGRectMake(10, CGRectGetMinY((subTitle?.frame)!)-38, (subTitle?.frame.size.width)!, 30))
         firstTitle?.font = UIFont.systemFontOfSize(18)
         firstTitle?.textAlignment = NSTextAlignment.Center
-        firstTitle?.textColor = UIColor.whiteColor()
+        firstTitle?.textColor = UIColor.blueColor()
         self.addSubview(firstTitle!)
     }
 
     func setValueForCell(dic: NSDictionary) {
-        subTitle?.text = "45道菜谱"
-        firstTitle?.text = "世界各地大排档的招牌美食"
-        showImage?.image = UIImage.init(named: "img")
+        subTitle!.text = "45道菜谱"
+        firstTitle!.text = "世界各地大排档的招牌美食"
+        showImage!.image = UIImage(imageLiteral: "img.jpg")
     }
 
     override func awakeFromNib() {
